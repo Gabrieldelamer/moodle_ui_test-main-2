@@ -40,4 +40,4 @@ class LoginPage(BasePage):
         self.click_element(LoginLocators.CREATE_BTN)
 
     def click_forgot_pass(self):
-        self.click_element(LoginLocators.REMEMBER_LOGIN)
+        self.click_element(LoginLocators.FORGOT_LOG)

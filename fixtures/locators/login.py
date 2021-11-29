@@ -8,5 +8,5 @@ class LoginLocators:
     ERROR_MESSAGE = (By.ID, "loginerrormessage")
     GUEST_LOGIN = (By.XPATH, "//form[@id='guestlogin']/button")
     REMEMBER_LOGIN = (By.ID, "rememberusername")
-    FORGOT_LOG = (By.ID, "rememberusername")
+    FORGOT_LOG = (By.LINK_TEXT, "Забыли логин или пароль?")
     CREATE_BTN = (By.XPATH, "//button[contains(.,'Создать учетную запись')]")
