@@ -1,5 +1,5 @@
 import logging
-import allure
+#import allure
 
 import pytest
 from selenium import webdriver
