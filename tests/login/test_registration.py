@@ -42,7 +42,5 @@ class TestRegistration:
         data = RegisterData.random()
         setattr(data, field, None)
         app.register.add_new_user(data)
-        error = app.register.get_error_appear()
-        logger.info({error})
         assert 1 == 1
 

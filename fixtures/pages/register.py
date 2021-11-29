@@ -31,6 +31,5 @@ class RegisterPage(BasePage):
 
     def get_error_appear(self):
         return self.get_text(locator=RegisterLocators.ERROR_FIELD)
-
-    def get_page_exist(self):
-        return self.get_text(locator=RegisterLocators.HAT_TEXT)
+ #   def get_page_exist(self):
+ #       return self.get_text(locator=RegisterLocators.HAT_TEXT)
