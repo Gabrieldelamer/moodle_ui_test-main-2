@@ -1,7 +1,7 @@
 from logging import Logger
 from time import sleep
 
-from fixtures.constants import Errors
+from fixtures.constants import Errors, Objects
 from fixtures.models.register import RegisterData
 import pytest
 import logging
@@ -31,16 +31,16 @@ class TestRegistration:
         """
         app.open_register_page()
         data = RegisterData.random()
-        setattr(data, "name", None)
+        setattr(data, "login", None)
         app.register.add_new_user(data)
-        error = app.register.get_error_name()
-        assert error == Errors.ERROR_FIRST_NAME, "Check error first name"
+        text  = app.register.get_error_name()
+        assert text == Errors.ERROR_FIRST_NAME, "Check error first name"
 
-    @pytest.mark.parametrize("field", ["login", "password", "email_2", "name", "surname"])
+    @pytest.mark.parametrize("field", ["password", "email_2", "name", "surname"])
     def test_empty_val(self, app, user_data, field):
         app.open_register_page()
         data = RegisterData.random()
         setattr(data, field, None)
         app.register.add_new_user(data)
-        assert 1 == 1
-
+        text = app.register.get_error_appear()
+        assert text == Objects.NEW_USER
