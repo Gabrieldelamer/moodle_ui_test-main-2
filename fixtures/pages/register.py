@@ -27,9 +27,9 @@ class RegisterPage(BasePage):
             self.click_element(locator=RegisterLocators.SUBMIT_BTN)
 
     def get_error_name(self) -> str:
-        return self.get_text(locator=RegisterLocators.ERROR_FIRST_NAME)
+        return self.get_text(locator=RegisterLocators.ERROR_LOGIN)
 
     def get_error_appear(self):
-        return self.get_text(locator=RegisterLocators.ERROR_FIELD)
+        return self.get_text(locator=RegisterLocators.NEW_USER)
     def get_page_exist(self):
         return self.get_text(locator=RegisterLocators.HAT_TEXT)
